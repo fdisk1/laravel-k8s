@@ -2,6 +2,7 @@ FROM node:current-alpine3.20 AS assets-build
 WORKDIR /var/www/html
 COPY . /var/www/html/
 
+RUN npm init -y
 RUN npm install
 RUN npm run development
 
