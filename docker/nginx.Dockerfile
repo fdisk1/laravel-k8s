@@ -2,7 +2,7 @@ FROM node:current-alpine3.20 AS assets-build
 WORKDIR /var/www/html
 COPY . /var/www/html/
 
-RUN npm install
+RUN npm ci
 RUN npm run development
 
 FROM nginx:stable-alpine3.20 AS nginx
