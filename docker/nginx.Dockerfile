@@ -7,4 +7,5 @@ RUN npm run development
 
 FROM nginx:stable-alpine3.20 AS nginx
 COPY /docker/vhost.conf /etc/nginx/conf.d/default.conf
+COPY /docker/package-lock.json /etc/nginx/conf.d/package-lock.json
 COPY --from=assets-build /var/www/html/public /var/www/html/
