@@ -10,4 +10,5 @@ COPY . /var/www/html/
 
 FROM nginx:stable-alpine3.20 AS nginx
 COPY /docker/vhost.conf /etc/nginx/conf.d/default.conf
-COPY --from=assets-build /var/www/html/public /var/www/html/
+COPY /docker/index.html /var/www/html/index.html
+# COPY --from=assets-build /var/www/html/public /var/www/html/
