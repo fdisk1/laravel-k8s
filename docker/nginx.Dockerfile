@@ -4,7 +4,7 @@ COPY . /var/www/html/
 
 RUN npm init -y
 RUN npm install
-RUN npm run development
+RUN npm run dev
 
 FROM nginx:stable-alpine3.20 AS nginx
 COPY /docker/package-lock.json /etc/nginx/conf.d/package-lock.json
