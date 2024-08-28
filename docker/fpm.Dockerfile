@@ -1,3 +1,4 @@
+#REF: https://medium.com/@Ahmed75/deploy-laravel-application-on-kubernetes-best-practice-ce52af341df
 FROM php:8.3.11RC2-zts-alpine3.20 AS base
 ENV EXT_APCU_VERSION=master
 RUN curl -vvv https://github.com/krakjoe/apcu.git
